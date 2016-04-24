@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_chevron_right_black_24dp" />
+
+    <TextView
+        android:id="@+id/nameBrewery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="NAME" />
+
+    <TextView
+        android:id="@+id/cityBrewery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/nameBrewery"
+        android:layout_marginTop="8dp"
+        tools:text="city" />
+
+    <TextView
+        android:id="@+id/countryBrewery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameBrewery"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/arrowRight"
+        android:layout_toRightOf="@+id/cityBrewery"
+        tools:text="country" />
+
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityBrewery"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:id="@+id/imageCall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_call_black_24dp" />
+
+
+        <ImageView
+            android:id="@+id/imageLoc"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/imageCall"
+            android:src="@drawable/ic_place_black_24dp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/updatedBrewery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLayout"
+        android:layout_marginTop="8dp"
+        tools:text="updated" />
+
+</RelativeLayout>

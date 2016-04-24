@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.rey.material.widget.ProgressView
+        android:id="@+id/progressView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        android:layout_centerInParent="true"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress"
+        app:pv_progressMode="indeterminate"
+        android:visibility="gone"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="fr.nicolasgodefroy.android.ohmybeer.fragment.SearchFragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.rey.material.widget.Button
+                    android:id="@+id/moinsMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-"
+                    app:rd_enable="true" />
+
+                <TextView
+                    android:id="@+id/textMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+
+                <com.rey.material.widget.Button
+                    android:id="@+id/plusMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+"
+                    app:rd_enable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <com.rey.material.widget.Button
+                    android:id="@+id/moinsMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-"
+                    app:rd_enable="true" />
+
+                <TextView
+                    android:id="@+id/textMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3" />
+
+                <com.rey.material.widget.Button
+                    android:id="@+id/plusMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="+"
+                    app:rd_enable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/selected_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/adapter_country" />
+
+            </LinearLayout>
+
+
+            <com.rey.material.widget.Button
+                android:id="@+id/search_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rechercher"
+                app:rd_enable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
